@@ -41,6 +41,15 @@ def ave_estimate(df, is_diabetes=False):
         return average.iloc[:, [3]]
     return average.iloc[:, [5]]
 
+def ave_estimate_asc(df, is_diabetes=False):
+    summed_estimate = df.groupby('County_Name').sum()
+    grouped_counties = df.groupby('County_Name').count()
+    average = summed_estimate / grouped_counties
+    if is_diabetes:
+        return average.iloc[:, [3]].sort_values(['Diabetes_Census_Tract_Estimate'], ascending=True).head(6)
+    return average.iloc[:, [5]].sort_values(['OverweightObese_Census_Tract_Estimate'], ascending=True).head(6)
+
+
 def regional_estimate(df):
     '''
     The regional estimate data is designed to take the difference between the
@@ -91,7 +100,7 @@ if __name__ == '__main__':
     
     print(ave_estimate(overweight))
     
-    print(sort_census_estimate_highest(obesity))
+    print(sort_census_estimate_highest(overweight))
     print(sort_census_estimate_lowest(obesity))
     #print(state_estimate(obesity))
 

@@ -102,6 +102,6 @@ if __name__ == '__main__':
     #print(plot_sort_census_estimate_highest(overweight, 'Overweight'))
     #print(plot_sort_census_estimate_highest(diabetes, 'Diabetes'))
     #print(plot_census_estimate(obesity, 'Obesity'))
-    #print(plot_census_estimate(obesity, 'Overweight'))
+    print(plot_census_estimate(overweight, 'Overweight'))
     #print(plot_census_estimate(obesity, 'Diabetes'))
     #print(plot_violin_adults(obesity, "Obesity", overweight, "Overweight", diabetes, "Diabetes"))
