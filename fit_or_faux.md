@@ -15,8 +15,9 @@ From the 18 of the data sets I decided to look at the following: Diabetes, Obesi
 Although the data was fairly clean there were 18 null values within Overweight and Diabetes and 36 null values for Obesity. CDPHE stated for counties less than 50 people residing data would not be available which may be attribute to the missing data.
 Upon cleaning the missing data values I wanted to get a feel for the data. Therefore, I wanted to inspect what the average data population sizes for the selected data sets. 
 
-<img src='images/adults.png'>
-<inset violin graphs>
+<div align="center">
+<img src='images/adults.png' height='300'>
+
 
 
 The data appears to be mostly consistent within it's sample size for county groupings.
@@ -25,21 +26,29 @@ The median data for Adults over 18 was 3,221+/- and the mean data for Adults ove
 <groupings per county>
 
 Further into exploratory analysis let's take a look at some data specific samples of the regions within counties most and least at risk for the health conditions.
+<div align="center">
+<img src="images/lowest_overweight_est.png" height='300'> 
 
-<insert lowest and highest census bar plots>
+<img src="images/lowest_obesity_est.png" height='300'> 
+
+
+<img src='images/lowest_diabetes_est.png' height='300'>
 
 As one can tell there is can be quite a discrepancy so it would be benficial to see where these lay on a total distribution.
-<histogram>
-<img src="images/overweight_hist.png">
-<img src="images/obesity_hist.png">
-<img src='images/Diabetes_hist.png'>
+
+<img src="images/overweight_hist.png" height='400'>
+
+<img src="images/obesity_hist.png" height='400'>
+
+<img src='images/Diabetes_hist.png' height='400'>
+
+
 
 
 Breaking down the data and what does it mean?
 Running statiscal and mathmatical approaches to transfer a percentage to total person amount of data. 
 
 Overall, why is this data important and what light does it shed?
-
 
 Obesity is an epidemic that is entirely taxing on the economy as a whole. Through analysis and estimation through the BFSS surveys we could isolate and target specific counties that are more at risk and implement funding for not only better education, but resources to make better decisions. 
 As we have seen with covid, comorbidities were a huge factor that play into health. While this data does not explicity show us there is a direct correlation with obesity and health conditions. 

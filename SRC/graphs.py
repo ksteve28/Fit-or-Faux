@@ -9,16 +9,14 @@ import functions as fn
 def plot_sort_census_estimate_highest(df, est_name):
 
     fig, ax = plt.subplots(figsize=(8,4))
-    county_name = fn.sort_census_estimate_highest(df)['County_Name']
-    print(county_name)
+    county_name = fn.sort_census_estimate_highest(df)['county_name_tract']
     name = fn.sort_census_estimate_highest(df).columns[2]
-    print(name)
     census_tract_est = fn.sort_census_estimate_highest(df)[name]
-    print(census_tract_est)
     ax.bar(county_name, census_tract_est, color='salmon')
     ax.set_title(f'Highest {est_name} Estimates')
-    ax.set_xlabel("Counties", size=11)
+    ax.set_xlabel("Counties", size=12)
     ax.set_ylabel("Estimated Frequency Rate in %")
+    plt.xticks(county_name, rotation=40)
     plt.tight_layout()
     plt.show();
 
@@ -27,13 +25,14 @@ def plot_sort_census_estimate_highest(df, est_name):
 def plot_sort_census_estimate_lowest(df, est_name_1):
     
     fig, ax = plt.subplots(figsize=(8,4))
-    county_name = fn.sort_census_estimate_lowest(df)['County_Name']
+    county_name = fn.sort_census_estimate_lowest(df)['county_name_tract']
     name = fn.sort_census_estimate_lowest(df).columns[2]
     census_tract_est = fn.sort_census_estimate_lowest(df)[name]
     ax.bar(county_name, census_tract_est, color='lightblue')
     ax.set_title(f'Lowest {est_name_1} Estimates')
-    ax.set_xlabel("Counties", size=11)
+    ax.set_xlabel("Counties", size=12)
     ax.set_ylabel("Estimated Frequency Rate in %")
+    plt.xticks(county_name, rotation=40)
     plt.tight_layout()
     plt.show();
 
@@ -92,16 +91,20 @@ def plot_violin_adults(df1, df1_name, df2, df2_name, df3, df3_name):
 
 if __name__ == '__main__':
     
-    obesity = pd.read_csv('Obesity_in_Adults_-_CDPHE_Community_Level_Estimates_(Census_Tracts) .csv')
-    overweight = pd.read_csv('Overweight_and_Obese_Adults_-_CDPHE_Community_Level_Estimates_(Census_Tracts).csv')
-    diabetes = pd.read_csv('Diabetes_in_Adults_-_CDPHE_Community_Level_Estimates__Census_Tracts_.csv')
+    obesity = pd.read_csv('/Users/Kelly/Desktop/Fit-or-Faux/Datasets/Obesity_in_Adults_-_CDPHE_Community_Level_Estimates_(Census_Tracts) .csv')
+    overweight = pd.read_csv('/Users/Kelly/Desktop/Fit-or-Faux/Datasets/Overweight_and_Obese_Adults_-_CDPHE_Community_Level_Estimates_(Census_Tracts).csv')
+    diabetes = pd.read_csv('/Users/Kelly/Desktop/Fit-or-Faux/Datasets/Diabetes_in_Adults_-_CDPHE_Community_Level_Estimates__Census_Tracts_.csv')
 
     print(fn.sort_census_estimate_highest(obesity))
+
+    #print(plot_sort_census_estimate_lowest(diabetes, 'Diabetes'))
+    #print(plot_sort_census_estimate_lowest(overweight, 'Overweight'))
+    print(plot_sort_census_estimate_lowest(obesity, 'Obesity'))
 
     #print(plot_sort_census_estimate_highest(obesity, 'Obesity'))
     #print(plot_sort_census_estimate_highest(overweight, 'Overweight'))
     #print(plot_sort_census_estimate_highest(diabetes, 'Diabetes'))
-    print(plot_census_estimate(obesity, 'Obesity'))
-    print(plot_census_estimate(obesity, 'Overweight'))
-    print(plot_census_estimate(obesity, 'Diabetes'))
-    print(plot_violin_adults(obesity, "Obesity", overweight, "Overweight", diabetes, "Diabetes"))
+    #print(plot_census_estimate(obesity, 'Obesity'))
+    #print(plot_census_estimate(obesity, 'Overweight'))
+    #print(plot_census_estimate(obesity, 'Diabetes'))
+    #print(plot_violin_adults(obesity, "Obesity", overweight, "Overweight", diabetes, "Diabetes"))

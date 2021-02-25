@@ -16,12 +16,16 @@ def clean_nulls(df):
     return df.dropna(how='any', inplace=True)
 
 def sort_census_estimate_highest(df):
+    df['census_tract'] = df['Census_Tract_Name'].str.extract('(\d*\.\d+|\d+)', expand=False)
+    df['county_name_tract'] = df['County_Name'] + ' ' + df['census_tract']
     name = df.columns[6]
-    return df.iloc[:, [3,4,6,9,11]].sort_values([name], ascending=[False]).head(6)
+    return df.iloc[:, [3,4,6,9,11,13]].sort_values([name], ascending=[False]).head(6)
 
-def sort_census_estimate_lowest(df):
+def sort_census_estimate_lowest(df): 
+    df['census_tract'] = df['Census_Tract_Name'].str.extract('(\d*\.\d+|\d+)', expand=False)
+    df['county_name_tract'] = df['County_Name'] + ' ' + df['census_tract']
     name = df.columns[6]
-    return df.iloc[:, [3,4,6,9,11]].sort_values([name], ascending=[True]).head(6)
+    return df.iloc[:, [3,4,6,9,11,13]].sort_values([name], ascending=[True]).head(6)
 
 """
 Due to the structure of column additions the following lines of code add columns and are in congruence
@@ -71,11 +75,12 @@ def grouping_counties_desc(df):
 
 if __name__ == '__main__':
 
-    obesity = pd.read_csv('Obesity_in_Adults_-_CDPHE_Community_Level_Estimates_(Census_Tracts) .csv')
-    overweight = pd.read_csv('Overweight_and_Obese_Adults_-_CDPHE_Community_Level_Estimates_(Census_Tracts).csv')
-    diabetes = pd.read_csv('Diabetes_in_Adults_-_CDPHE_Community_Level_Estimates__Census_Tracts_.csv')
+    obesity = pd.read_csv('/Users/Kelly/Desktop/Fit-or-Faux/Datasets/Obesity_in_Adults_-_CDPHE_Community_Level_Estimates_(Census_Tracts) .csv')
+    overweight = pd.read_csv('/Users/Kelly/Desktop/Fit-or-Faux/Datasets/Overweight_and_Obese_Adults_-_CDPHE_Community_Level_Estimates_(Census_Tracts).csv')
+    diabetes = pd.read_csv('/Users/Kelly/Desktop/Fit-or-Faux/Datasets/Diabetes_in_Adults_-_CDPHE_Community_Level_Estimates__Census_Tracts_.csv')
 
-    sort_census_estimate_highest(obesity)
+    print(sort_census_estimate_highest(obesity))
+    print(sort_census_estimate_lowest(obesity))
     #print(state_estimate(obesity))
 
     #print(overweight)
