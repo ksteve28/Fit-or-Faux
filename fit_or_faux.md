@@ -1,4 +1,4 @@
-Fit or Faux: A look into Colorado’s Health Data
+<H1> Fit or Faux: A look into Colorado’s Health Data</H1>
 
 <img src='images/IMG_9740.jpeg'>
 
@@ -30,7 +30,7 @@ The median data for Adults over 18 was 3,221+/- and the mean data for Adults ove
 
 Further into exploratory analysis let's take a look at some data specific samples of the regions within counties most and least at risk for the health conditions.
 
-
+The following graphs are census and counties with the lowest prevalence rates.
 <br>
 <div align="center">
 <img src="images/lowest_overweight_est.png" height='300'> 
@@ -44,6 +44,19 @@ Further into exploratory analysis let's take a look at some data specific sample
 </div>
 <br>
 
+<br>
+<div align="center">
+<img src="images/highest_overweight_est.png" height='300'> 
+<br>
+
+<img src="images/highest_obesity_est.png" height='300'> 
+
+<br>
+
+<img src='images/highest_diabetes_est.png' height='300'>
+</div>
+<br>
+
 As one can tell there is can be quite a discrepancy so it would be benficial to see where these lay on a total distribution.
 
 <div align="center">
@@ -54,6 +67,7 @@ As one can tell there is can be quite a discrepancy so it would be benficial to 
 <img src='images/Diabetes_hist.png' height='400'>
 </div>
 <br>
+
 
 
 Breaking down the data and what does it mean?
