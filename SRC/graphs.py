@@ -85,9 +85,6 @@ def plot_violin_adults(df1, df1_name, df2, df2_name, df3, df3_name):
         plt.tight_layout()
     plt.show()
 
-####need to add a save figure 
-
-
 
 if __name__ == '__main__':
     

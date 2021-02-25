@@ -11,11 +11,13 @@ Colorado Department of Public Health & Environment released Community Level Esti
 
 
 # Exploratory Data Analysis
-From the 18 of the data sets I decided to look at the following: Diabetes, Obesity, and Overweight. The CDPHE isolated 64 counties into roughly 1,240 rows with 16 standard columns. Each row is unique with its own Census Tract data. This data provides insight on the County name, adult population over 18 (within that census tract data), health condition or risk behavior estimate, estimate confidence interval, quintile, health condition or risk behavior county regional estimate, and state estimate. 
+From the 18 data sets provided I decided to look at the following: Diabetes, Obesity, and Overweight. The CDPHE isolated 64 counties into roughly 1,240 rows with 16 standard columns. Each row is unique with its own Census Tract data. This data provides insight on the County name, adult population over 18 (within that census tract data), health condition or risk behavior estimate, estimate confidence interval, quintile, health condition or risk behavior county regional estimate, and state estimate. 
 
 
-Although the data was fairly clean there were 18 null values within Overweight and Diabetes and 36 null values for Obesity. CDPHE stated for counties less than 50 people residing data would not be available which may be attribute to the missing data.
-Upon cleaning the missing data values I wanted to get a feel for the data. Therefore, I wanted to inspect what the average data population sizes for the selected data sets. 
+Although the data was fairly clean there were 18 null values within Overweight and Diabetes and 36 null values for Obesity. CDPHE stated for counties less than 50 people residing data would not be available which may be attribute to the missing data. In order to reduce graphing errors I also created an additional column to distibguish the census tract id and country name.
+
+
+Upon cleaning the missing data values I wanted to get a feel for the data. First, I wanted to inspect our sample sizes for the cenesus tracts. How I did this was looking at the column "Adult Population Over 18". As you can tell below, our sample sizes are very consistent among the data sets. This makes sense because the census tracts are based on surveys presented in the same geographical specific region. 
 
 <div align="center">
 <img src='images/adults.png' height='300'>
@@ -23,14 +25,16 @@ Upon cleaning the missing data values I wanted to get a feel for the data. There
 <br>
 
 
-The data appears to be mostly consistent within it's sample size for county groupings.
-The median data for Adults over 18 was 3,221+/- and the mean data for Adults over 18 was 3,350+/-. Which made curious as to groupings per county.
+The median data for Adults over 18 was roughly 3,221. and the mean data for Adults over 18 was roughly 3,350. Which made curious as to groupings per county.
 
 <groupings per county>
 
 Further into exploratory analysis let's take a look at some data specific samples of the regions within counties most and least at risk for the health conditions.
 
 The following graphs are census and counties with the lowest prevalence rates.
+
+
+
 <br>
 <div align="center">
 <img src="images/lowest_overweight_est.png" height='300'> 
@@ -72,6 +76,57 @@ As one can tell there is can be quite a discrepancy so it would be benficial to 
 
 Breaking down the data and what does it mean?
 Running statiscal and mathmatical approaches to transfer a percentage to total person amount of data. 
+
+
+
+Findings
+Through examing the data further I discovered that out of xxx census county tract estimates 638 exceeded the state estimate and 591 were below for obesity.
+
+Overweight - 535 below state estimations, 
+
+Prior to combining the counties and taking an average 
+
+Grouping the Counties together and divding by their occurance within the census track it is seen that 
+
+Obesity - mean 22.85, median 23.10
+
+
+| County_Name   |   Obese_Census_Tract_Estimate |
+|:--------------|------------------------------:|
+| Mineral       |                           2.5 |
+| Hinsdale      |                           4.8 |
+| San Miguel    |                           5.3 |
+| Gunnison      |                           7.7 |
+| Pitkin        |                           9.3 |
+| Summit        |                          10.8 |
+
+
+| County_Name   |   Obese_Census_Tract_Estimate |
+|:--------------|------------------------------:|
+| Costilla      |                         43.7  |
+| Jackson       |                         40.2  |
+| Bent          |                         39.5  |
+| Kit Carson    |                         38.5  |
+| Las Animas    |                         36.55 |
+| Cheyenne      |                         35.6  |
+
+| County_Name   |   OverweightObese_Census_Tract_Estimate |
+|:--------------|----------------------------------------:|
+| Hinsdale      |                                 30.90   |
+| San Miguel    |                                 31.73   |
+| Pitkin        |                                 36.75   |
+| Mineral       |                                 36.90   |
+| Ouray         |                                 41.4    |
+| Eagle         |                                 41.87   |
+
+| County_Name   |   OverweightObese_Census_Tract_Estimate |
+|:--------------|----------------------------------------:|
+| Bent          |                                  80     |
+| Morgan        |                                  74.825 |
+| Huerfano      |                                  72.65  |
+| Kiowa         |                                  72.4   |
+| Prowers       |                                  71.74  |
+| Costilla      |                                  70.45  |
 
 Overall, why is this data important and what light does it shed?
 
