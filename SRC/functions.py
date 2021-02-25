@@ -33,6 +33,14 @@ to the way they were written. If you do not import the functions moving from reg
 possible they will not run appropriately.
 """
 
+def ave_estimate(df, is_diabetes=False):
+    summed_estimate = df.groupby('County_Name').sum()
+    grouped_counties = df.groupby('County_Name').count()
+    average = summed_estimate / grouped_counties
+    if is_diabetes:
+        return average.iloc[:, [3]]
+    return average.iloc[:, [5]]
+
 def regional_estimate(df):
     '''
     The regional estimate data is designed to take the difference between the
@@ -79,6 +87,10 @@ if __name__ == '__main__':
     overweight = pd.read_csv('/Users/Kelly/Desktop/Fit-or-Faux/Datasets/Overweight_and_Obese_Adults_-_CDPHE_Community_Level_Estimates_(Census_Tracts).csv')
     diabetes = pd.read_csv('/Users/Kelly/Desktop/Fit-or-Faux/Datasets/Diabetes_in_Adults_-_CDPHE_Community_Level_Estimates__Census_Tracts_.csv')
 
+    print(ave_estimate(diabetes))
+    
+    print(ave_estimate(overweight))
+    
     print(sort_census_estimate_highest(obesity))
     print(sort_census_estimate_lowest(obesity))
     #print(state_estimate(obesity))
