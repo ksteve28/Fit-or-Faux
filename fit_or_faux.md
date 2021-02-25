@@ -1,14 +1,16 @@
 Fit or Faux: A look into Colorado’s Health Data
 
-Background & Motivation
+<img src='images/IMG_9740.jpeg'>
+
+# Background & Motivation
 
 Health has been a growing passion of mine. Living in Colorado there is an abundance of indoor and outdoor activities to partake in and get you moving. Many social interactions even take place around some form of activity or movement. An article written in 2020, published on Exercise.com - “These are the 10 fittest states in America” dubbed Colorado number one. However, with numerous health epidemics on the rise, including obesity I want to know how healthy is the state truly? Is Colorado performing up to the standard to combat these epidemics or could there be room for improvement? By creating additional awareness to these epidemics hopefully it will encourage individuals to make better decisions that will impact their health positively. 
 
-Data
+# Data
 Colorado Department of Public Health & Environment released Community Level Estimates for 18 data sets specific to health conditions and risk behaviors. Some data sets are include Overweight, Obese, Diabetes, Binge Drinking, Asthma, etc. Individual survey responses from the Colorado BRFSS are nested within geographic boundaries (counties) where both individual characteristics (demographic) as well as sociodemographic characteristics can be used to model the the probability of having a condition or risk behavior. 
 
 
-Exploratory Data Analysis
+# Exploratory Data Analysis
 From the 18 of the data sets I decided to look at the following: Diabetes, Obesity, and Overweight. The CDPHE isolated 64 counties into roughly 1,240 rows with 16 standard columns. Each row is unique with its own Census Tract data. This data provides insight on the County name, adult population over 18 (within that census tract data), health condition or risk behavior estimate, estimate confidence interval, quintile, health condition or risk behavior county regional estimate, and state estimate. 
 
 
@@ -17,7 +19,8 @@ Upon cleaning the missing data values I wanted to get a feel for the data. There
 
 <div align="center">
 <img src='images/adults.png' height='300'>
-
+</div>
+<br>
 
 
 The data appears to be mostly consistent within it's sample size for county groupings.
@@ -26,23 +29,31 @@ The median data for Adults over 18 was 3,221+/- and the mean data for Adults ove
 <groupings per county>
 
 Further into exploratory analysis let's take a look at some data specific samples of the regions within counties most and least at risk for the health conditions.
+
+
+<br>
 <div align="center">
 <img src="images/lowest_overweight_est.png" height='300'> 
+<br>
 
 <img src="images/lowest_obesity_est.png" height='300'> 
 
+<br>
 
 <img src='images/lowest_diabetes_est.png' height='300'>
+</div>
+<br>
 
 As one can tell there is can be quite a discrepancy so it would be benficial to see where these lay on a total distribution.
 
+<div align="center">
 <img src="images/overweight_hist.png" height='400'>
 
 <img src="images/obesity_hist.png" height='400'>
 
 <img src='images/Diabetes_hist.png' height='400'>
-
-
+</div>
+<br>
 
 
 Breaking down the data and what does it mean?
