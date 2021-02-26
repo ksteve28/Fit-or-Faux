@@ -4,21 +4,21 @@
 
 # Background & Motivation
 
-Health has been a growing passion of mine. Living in Colorado there is an abundance of indoor and outdoor activities to partake in and get you moving. Many social interactions even take place around some form of activity or movement. An article written in 2020, published on Exercise.com - “These are the 10 fittest states in America” dubbed Colorado number one. However, with numerous health epidemics on the rise, including obesity I want to know how healthy is the state truly? Is Colorado performing up to the standard to combat these epidemics or could there be room for improvement? By creating additional awareness to these epidemics hopefully it will encourage individuals to make better decisions that will impact their health positively. 
+Health has been a growing passion of mine. Living in Colorado there is an abundance of indoor and outdoor activities to partake in and get you moving. Many social interactions even take place around some form of activity or movement. An article written in 2020, published on Exercise.com titled “These are the 10 fittest states in America” dubbed Colorado number one. However, with numerous health epidemics on the rise, including obesity I want to know how healthy is the state truly? Is Colorado performing up to the standards to combat these epidemics or could there be room for improvement? By creating additional awareness to these epidemics hopefully it will encourage individuals to make better decisions that will impact their health positively. 
 
 # Data
-Colorado Department of Public Health & Environment released Community Level Estimates for 18 data sets specific to health conditions and risk behaviors. Some data sets are include Overweight, Obese, Diabetes, Binge Drinking, Asthma, etc. Individual survey responses from the Colorado Behavorial Risk Factor Surveillance System (BRFSS) are nested within geographic boundaries (counties) where both individual characteristics (demographic) as well as sociodemographic characteristics can be used to model the the probability of having a condition or risk behavior. 
+Colorado Department of Public Health & Environment released Community Level Estimates for 18 data sets specific to health conditions and risk behaviors. Some data sets include Overweight, Obese, Diabetes, Binge Drinking, Asthma, etc. Individual survey responses from the Colorado Behavorial Risk Factor Surveillance System (BRFSS) are nested within geographic boundaries (counties) where both individual characteristics (demographic) as well as sociodemographic characteristics can be used to model the the probability of having a condition or risk behavior. This data is a combination estimate of surveys taken between 2014-2017.
 
 The BRFSS originated in 1984 and typically run by the Center for Disease Control and Prevention (CDC) although individual States can and do conduct their own surveys with the ability to add to the general questionnaire. The survey is conducted by random over the phone. Public and private health authorities at the federal, state, and local levels use BRFSS data to identify public health problems, design policies and interventions, set goals and measure progress toward these goals. 
 
 # Exploratory Data Analysis
 From the 18 data sets provided I decided to look at the following: Diabetes, Obesity, and Overweight. The CDPHE isolated 64 counties into roughly 1,240 rows with 16 standard columns. Each row is unique with its own Census Tract data. This data provides insight on the County name, adult population over 18 (within that census tract data), health condition or risk behavior estimate, estimate confidence interval, quintile, health condition or risk behavior county-regional estimate, and state estimate. 
 
-It is worth noting the relationship between body mass index (BMI) and overweight/obesity. BMI is measured as the ratio of height to weight. BMI often correlates with important health outcomes like heart disease, diabetes, cancer, and overall mortality. For adult men and woman a "healthy" BMI is between 18.5% and 24.9%. An overweight BMI is considered between 25.00% to 29.9%. Lastly, an obese BMI is 30.0% and above.
+It is worth noting the relationship between body mass index (BMI) and overweight/obesity. BMI is measured as the ratio of height to weight. BMI often correlates with important health outcomes like heart disease, diabetes, cancer, and overall mortality. For adult men and woman a the standard "healthy" BMI is between 18.5% and 24.9%. An overweight BMI is considered between 25.00% to 29.9%. Lastly, an obese BMI is 30.0% and above.
 
 Although the data was fairly clean there were 18 null values within Overweight and Diabetes and 36 null values for Obesity. CDPHE stated for counties less than 50 people residing data would not be available which may be attribute to the missing data. In order to reduce graphing errors I also created an additional column to distibguish the census tract id and country name.
 
-Upon cleaning the missing data values I wanted to get a feel for the data. First, I wanted to inspect our sample sizes for the cenesus tracts. How I did this was looking at the column "Adult Population Over 18". As you can tell below, our sample sizes are very consistent among the data sets. This makes sense because the census tracts are based on surveys presented in the same geographical specific region. 
+Upon cleaning the missing data values I wanted to get a feel for the data. First, I wanted to inspect our sample sizes for the cenesus tracts. How I did this was looking at the column "Adult Population Over 18". As you can tell below, our sample sizes are very consistent among the data sets. This makes sense because the census tracts are based on surveys combined geographically. 
 
 <div align="center">
 <img src='images/adults.png' height='400'>
@@ -43,7 +43,7 @@ The median data for Adults over 18 was roughly 3,221. and the mean data for Adul
 </div>
 &nbsp;
 
-Further into exploratory analysis let's take a look at some data specific samples of the regions within counties most and least at risk for the health conditions. The following graphs are census and counties with the lowest prevalence rates.
+Further into exploratory analysis let's take a look at some data specific samples of the regions within counties most and least at risk for the health conditions. The following graphs are census tracts and counties levels with the lowest and highest prevalence rates.
 
 <br>
 <div align="center">
@@ -102,6 +102,7 @@ Further into exploratory analysis let's take a look at some data specific sample
 <img src="images/highest_obesity_est.png" height='300'> 
 
 <br>
+&nbsp;
 
 | County_Name   |   Obese_Census_Tract_Estimate |
 |:--------------|------------------------------:|
@@ -115,6 +116,7 @@ Further into exploratory analysis let's take a look at some data specific sample
 <img src='images/highest_diabetes_est.png' height='300'>
 
 <br>
+&nbsp;
 
 | County_Name   |   Diabetes_Census_Tract_Estimate |
 |:--------------|---------------------------------:|
@@ -127,7 +129,7 @@ Further into exploratory analysis let's take a look at some data specific sample
 &nbsp;
 </div>
 
-As one can tell there is can be quite a discrepancy so it would be benficial to see where these lay on a total distribution.
+As one can tell there is can be quite a discrepancy so it would be benficial to see how this falls on a total distribution.
 &nbsp;
 
 <div align="center">
@@ -143,7 +145,7 @@ As one can tell there is can be quite a discrepancy so it would be benficial to 
 
 
 # Conclusions
-While examining the data I am able to comment on Colorado's fitness level on a national scale via state by state. However, the CDC published estimates for 2017 estimated the percentage of adults 20 and over with obesity was 42.5% (compared to Colorado's average estimate of 21.6) and overweight inlcuding obesity was 73.6% (compared to Colorado's average estimates of 57.7%).
+While examining the data I am able to comment on Colorado's fitness level on a national scale comparing state by state. However, the CDC published estimates for 2017 estimated the percentage of adults 20 and over with obesity was 42.5% (compared to Colorado's average estimate of 21.6) and overweight inlcuding obesity was 73.6% (compared to Colorado's average estimate of 57.7%).
 
 | Denver County      |                       Rates |
 |:-------------------|----------------------------:|
@@ -162,6 +164,7 @@ While examining the data I am able to comment on Colorado's fitness level on a n
 | 50%   |                                 60.07   |
 | 75%   |                                 66.15   |
 | max   |                                 80.00   |
+&nbsp;
 
 | Overweight Estimates  |                    Rates |
 |:----------------------|-------------------------:|
@@ -182,7 +185,7 @@ While examining the data I am able to comment on Colorado's fitness level on a n
 | 75%   |                      28.67    |
 | max   |                      43.70    |
 
-
+&nbsp;
 | Obesity Estimates  |                       Rates |
 |:-------------------|----------------------------:|
 | Counties > 21.6    |                         37  |
@@ -202,7 +205,7 @@ While examining the data I am able to comment on Colorado's fitness level on a n
 | 75%   |                         10.70    |
 | max   |                         19.80    |
 
-
+&nbsp;
 | Diabetes Estimates |                       Rates |
 |:-------------------|----------------------------:|
 | Counties > 7.0     |                         34  |
@@ -212,13 +215,13 @@ While examining the data I am able to comment on Colorado's fitness level on a n
 #
 
 
-So what does all of this data allude to? It would appear the the BRFSS surveys show that the mean of the data does align with the state estimates of the assesed health conditions. On a national scale, Colorado does have a considerably lower average estimated rate than the national estimated average. 
+So what does all of this data allude to? It would appear the the BRFSS surveys show that the mean of the data does align with the state estimates of the assesed health conditions. Howver, on a national scale, Colorado does have a considerably lower average estimated rate than the national estimated average. 
 
-Health conditions such as overweight, obesity, and diabetes can tax an economy dramactically. These health conditions as mentioned earlier are often seen with comorbidities. What that means to an economy on a microeconomic level is that health care costs can eat into an individuals income, lifestyle, and happiness. On a macroeconomic level it affects companies, governments, and healthcare including patient care and insurance. What this means is Americans are paying more. The average American's health insurance grew 66% from 2005 to 2015. 
+Health conditions such as overweight, obesity, and diabetes can bear great burden on an economy. These health conditions as mentioned earlier are often seen with comorbidities. What that means to an economy on a microeconomic level is that health care costs can eat into an individuals income, lifestyle, and happiness. On a macroeconomic level it affects companies, governments, and healthcare including patient care and insurance. In the end, what this means is Americans are paying more. The average American's health insurance grew 66% from 2005 to 2015. This is a massive increase with no sign of slowing day since the average year over year increase is between 5%-6%.
 
-The CDPHE has a unique opportunity to continue to work on preventative measures of these health conditions through policies, education and allocating resources to not only high risk counties, but all counties. It could also be worth examining health behaviors of counties in the lowest at risk estimates.
+The CDPHE has a unique opportunity to continue to work on preventative measures for these health conditions through policies, education and allocating resources to not only high risk counties, but all counties. It could also be worth examining health behaviors of counties in the lowest at risk estimates.
 
-There is no doubt there is a national epidemic on the rise for the health conditions discussed. While Colorado and the CDPHE as a whole are doing a good job keeping the state estimated values less than the national average, it is apparent the work must go on.
+There is no doubt there is a national epidemic on the rise for the health conditions discussed. While Colorado and the CDPHE as a whole are doing a good job keeping the state estimated values less than the national average, it is apparent the work must go on. In the end it is up to the citizen to continue to make healthy and wise decisions for their health.
 
 #
 

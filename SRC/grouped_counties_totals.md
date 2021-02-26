@@ -1,5 +1,5 @@
 
-County Occurances within Census Tracts
+**County Occurances within Census Tracts**
 
 | County_Name   |   OBJECTID |
 |:--------------|-----------:|
@@ -68,9 +68,9 @@ County Occurances within Census Tracts
 | Mineral       |          1 |
 | Crowley       |          1 |
 
+#
 
-
-Obesity Census Tract Grouped by Counties 
+**Obesity Census Tract Grouped by Counties** 
 
 | County_Name   |   Obese_Census_Tract_Estimate |
 |:--------------|------------------------------:|
@@ -138,8 +138,9 @@ Obesity Census Tract Grouped by Counties
 | Washington    |                       31.45   |
 | Weld          |                       28.1091 |
 | Yuma          |                       21.9    |
+#
 
-Overweight & Obese Census Track Grouped by Counties
+**Overweight & Obese Census Track Grouped by Counties**
 
 
 | County_Name   |   OverweightObese_Census_Tract_Estimate |
@@ -209,7 +210,9 @@ Overweight & Obese Census Track Grouped by Counties
 | Weld          |                                 64.8156 |
 | Yuma          |                                 55.55   |
 
-Diabetes Census Tract Grouped by Counties 
+#
+
+**Diabetes Census Tract Grouped by Counties** 
 
 | County_Name   |   Diabetes_Census_Tract_Estimate |
 |:--------------|---------------------------------:|
