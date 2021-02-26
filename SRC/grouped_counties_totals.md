@@ -1,5 +1,5 @@
 
-Obesity Census Tract by Counties
+Obesity Census Tract Grouped by Counties 
 
 | County_Name   |   Obese_Census_Tract_Estimate |
 |:--------------|------------------------------:|
@@ -68,6 +68,8 @@ Obesity Census Tract by Counties
 | Weld          |                       28.1091 |
 | Yuma          |                       21.9    |
 
+Overweight & Obese Census Track Grouped by Counties
+
 
 | County_Name   |   OverweightObese_Census_Tract_Estimate |
 |:--------------|----------------------------------------:|
@@ -135,6 +137,8 @@ Obesity Census Tract by Counties
 | Washington    |                                 68.5    |
 | Weld          |                                 64.8156 |
 | Yuma          |                                 55.55   |
+
+Diabetes Census Tract Grouped by Counties 
 
 | County_Name   |   Diabetes_Census_Tract_Estimate |
 |:--------------|---------------------------------:|

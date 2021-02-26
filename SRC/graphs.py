@@ -7,6 +7,7 @@ import functions as fn
 #BE SURE TO EDIT FIG SAVE - APPARENTLY NOT A FUNCTION
 
 def plot_sort_census_estimate_highest(df, est_name):
+    """ Bar chart indicating the highest county prevalence rates """
 
     fig, ax = plt.subplots(figsize=(8,4))
     county_name = fn.sort_census_estimate_highest(df)['county_name_tract']
@@ -23,6 +24,7 @@ def plot_sort_census_estimate_highest(df, est_name):
 
 
 def plot_sort_census_estimate_lowest(df, est_name_1):
+    """ Bar chart indicating the loweset county prevalence rates """
     
     fig, ax = plt.subplots(figsize=(8,4))
     county_name = fn.sort_census_estimate_lowest(df)['county_name_tract']
@@ -39,6 +41,8 @@ def plot_sort_census_estimate_lowest(df, est_name_1):
 
 
 def plot_census_estimate(df, name):
+    """ Histogram of census tract distribution"""
+
     census_est = df.columns[6]
     state_est_col = df.columns[11]
     df['state_estimate'] = df[state_est_col].str.extract('(\d*\.\d+|\d+)', expand=False).astype(float)
@@ -57,6 +61,8 @@ def plot_census_estimate(df, name):
 
 
 def plot_violin_adults(df1, df1_name, df2, df2_name, df3, df3_name):
+
+    """Violin plot showing distribution of adult sizes in census tracts """
 
     fig, (ax1, ax2, ax3) = plt.subplots(nrows=1, ncols=3)
     # Plot violin plot on axes 1

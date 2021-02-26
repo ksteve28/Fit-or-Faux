@@ -10,18 +10,23 @@ import scipy.stats as stats
    # return df_name = pd.read_csv('df_file')
 
 def null_data(df):
+    """" To determine if there is nulls in the data """"
     return df.isnull().sum().sum()
 
 def clean_nulls(df):
     return df.dropna(how='any', inplace=True)
 
 def sort_census_estimate_highest(df):
+    """This function creates a new column in order to plot later on and primary function is
+    to return the highest census estimates in each individual census tract. """
     df['census_tract'] = df['Census_Tract_Name'].str.extract('(\d*\.\d+|\d+)', expand=False)
     df['county_name_tract'] = df['County_Name'] + ' ' + df['census_tract']
     name = df.columns[6]
     return df.iloc[:, [3,4,6,9,11,13]].sort_values([name], ascending=[False]).head(6)
 
 def sort_census_estimate_lowest(df): 
+    """This function creates a new column in order to plot later on and primary function is
+    to return the lowest census estimates in each individual census tract. """
     df['census_tract'] = df['Census_Tract_Name'].str.extract('(\d*\.\d+|\d+)', expand=False)
     df['county_name_tract'] = df['County_Name'] + ' ' + df['census_tract']
     name = df.columns[6]
@@ -34,6 +39,10 @@ possible they will not run appropriately.
 """
 
 def ave_estimate(df, is_diabetes=False):
+    """This function allows for grouping counties and taking average census estimate
+    through a weighted division of the counties. The diabetes dataset was not consistent
+    with the other two data sets tested therefore needed to create a boolean function
+    to direct to a different row to produce the desired results. """
     summed_estimate = df.groupby('County_Name').sum()
     grouped_counties = df.groupby('County_Name').count()
     average = summed_estimate / grouped_counties
@@ -47,7 +56,7 @@ def ave_estimate_asc(df, is_diabetes=False):
     average = summed_estimate / grouped_counties
     if is_diabetes:
         return average.iloc[:, [3]].sort_values(['Diabetes_Census_Tract_Estimate'], ascending=True).head(6)
-    return average.iloc[:, [5]].sort_values(['OverweightObese_Census_Tract_Estimate'], ascending=True).head(6)
+    return average.iloc[:, [5]].sort_values(['fill_in_data'], ascending=True).head(6)
 
 
 def regional_estimate(df):

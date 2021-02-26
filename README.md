@@ -83,10 +83,10 @@ The following graphs are census and counties with the lowest prevalence rates.
 
 | County_Name   |   OverweightObese_Census_Tract_Estimate |
 |:--------------|----------------------------------------:|
-| Bent          |                                  80     |
+| Bent          |                                  80.00  |
 | Morgan        |                                  74.82  |
 | Huerfano      |                                  72.65  |
-| Kiowa         |                                  72.4   |
+| Kiowa         |                                  72.40  |
 | Prowers       |                                  71.74  |
 | Costilla      |                                  70.45  |
 <br>
@@ -138,10 +138,16 @@ While examining the data I am able to comment on Colorado's fitness level on a n
 
 #
 
-| Overweight |    Rates |
-|:-----------|---------:|
-| Mean       |   58.50  |
-| Median     |   60.07  |
+|       |   OverweightObese_Census_Tract_Estimate |
+|:------|----------------------------------------:|
+| count |                                 64.00   |
+| mean  |                                 58.50   |
+| std   |                                 10.67   |
+| min   |                                 30.90   |
+| 25%   |                                 52.52   |
+| 50%   |                                 60.07   |
+| 75%   |                                 66.15   |
+| max   |                                 80.00   |
 
 | Overweight Estimates  |                    Rates |
 |:----------------------|-------------------------:|
@@ -151,10 +157,16 @@ While examining the data I am able to comment on Colorado's fitness level on a n
 | Counites < 73.6       |                      62  |
 # 
 
-| Obesity  |      Rates |
-|:---------|-----------:|
-| Mean     |     22.85  |
-| Median   |     23.10  |
+|       |   Obese_Census_Tract_Estimate |
+|:------|------------------------------:|
+| count |                      64.00    |
+| mean  |                      22.85    |
+| std   |                       9.19    |
+| min   |                       2.50    |
+| 25%   |                      17.14    |
+| 50%   |                      23.10    |
+| 75%   |                      28.67    |
+| max   |                      43.70    |
 
 
 | Obesity Estimates  |                       Rates |
@@ -165,10 +177,16 @@ While examining the data I am able to comment on Colorado's fitness level on a n
 | Counites < 42.5    |                         63  |
 #
 
-| Diabetes |      Rates |
-|:---------|-----------:|
-| Mean     |      8.00  |
-| Median   |      7.11  |
+|       |   Diabetes_Census_Tract_Estimate |
+|:------|---------------------------------:|
+| count |                         64.00    |
+| mean  |                          8.00    |
+| std   |                          4.52    |
+| min   |                          1.00    |
+| 25%   |                          4.71    |
+| 50%   |                          7.11    |
+| 75%   |                         10.70    |
+| max   |                         19.80    |
 
 
 | Diabetes Estimates |                       Rates |
@@ -180,13 +198,20 @@ While examining the data I am able to comment on Colorado's fitness level on a n
 #
 
 
+So what does all of this data allude to? It would appear the the BRFSS surveys show that the mean of the data does align with the state estimates of the assesed health conditions. On a national scale, Colorado does have a considerably lower rate, but 
 
 
 
-Overall, why is this data important and what light does it shed?
 
-Obesity is an epidemic that is entirely taxing on the economy as a whole. Through analysis and estimation through the BFSS surveys we could isolate and target specific counties that are more at risk and implement funding for not only better education, but resources to make better decisions. 
-As we have seen with covid, comorbidities were a huge factor that play into health. While this data does not explicity show us there is a direct correlation with obesity and health conditions. 
 
-Through the exploration of this data a question arose in my mind. Would it be more appropriate The state estimates is an overall projection where as the county and regional took into consideration the BRFF surveys and was able to predict. Would it be more useful for the public to have more targeted health anaylsis in order to have more community outrach/etc?
+## Sources 
+Data - 
+[Colorado Department of Public Health & Environment - URL](http://www.cohealthmaps.dphe.state.co.us/cdphe_community_level_estimates/)
+
+BMI Information - [Click Here](https://infogram.com/us-adult-obesity-rates-since-1960-1gzxop49on65mwy)
+
+BRFSS - [CDPHE - BRFSS ](https://cdphe.colorado.gov/center-for-health-and-environmental-data/survey-research/behavioral-risk-factor-surveillance-system)
+
+
+ CDC Obesity & Overweight Estimates [Click HEre](https://www.cdc.gov/nchs/fastats/obesity-overweight.htm)
 
