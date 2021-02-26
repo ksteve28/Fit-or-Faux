@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns 
 import scipy.stats as stats 
 
-#clean up this - this doesn't work 
-#def import_data(df_name, df_file):
-    
-   # return df_name = pd.read_csv('df_file')
+
+def import_data(df_name, df_file):
+    df_name = pd.read_csv('df_file')
+    return df_name 
 
 def null_data(df):
     """" To determine if there is nulls in the data """"
@@ -51,12 +51,16 @@ def ave_estimate(df, is_diabetes=False):
     return average.iloc[:, [5]]
 
 def ave_estimate_asc(df, is_diabetes=False):
+    """This particular function needs to sort the census tract estimate
+    value which changes names depending on the data set. The most efficient
+    way at the moment would to plug in the census tract estimate column name
+    since I couldn't find a more efficient work around."""
     summed_estimate = df.groupby('County_Name').sum()
     grouped_counties = df.groupby('County_Name').count()
     average = summed_estimate / grouped_counties
     if is_diabetes:
         return average.iloc[:, [3]].sort_values(['Diabetes_Census_Tract_Estimate'], ascending=True).head(6)
-    return average.iloc[:, [5]].sort_values(['fill_in_data'], ascending=True).head(6)
+    return average.iloc[:, [5]].sort_values([""], ascending=True).head(6)
 
 
 def regional_estimate(df):
@@ -105,12 +109,26 @@ if __name__ == '__main__':
     overweight = pd.read_csv('/Users/Kelly/Desktop/Fit-or-Faux/Datasets/Overweight_and_Obese_Adults_-_CDPHE_Community_Level_Estimates_(Census_Tracts).csv')
     diabetes = pd.read_csv('/Users/Kelly/Desktop/Fit-or-Faux/Datasets/Diabetes_in_Adults_-_CDPHE_Community_Level_Estimates__Census_Tracts_.csv')
 
-    print(ave_estimate(diabetes))
-    
-    print(ave_estimate(overweight))
-    
-    print(sort_census_estimate_highest(overweight))
-    print(sort_census_estimate_lowest(obesity))
-    #print(state_estimate(obesity))
+    clean_nulls(obesity)
+    clean_nulls(overweight)
+    clean_nulls(diabetes)
 
-    #print(overweight)
+    sort_census_estimate_highest(obesity)
+    sort_census_estimate_highest(overweight)
+    sort_census_estimate_highest(diabetes)
+    
+    sort_census_estimate_lowest(obesity)
+    sort_census_estimate_lowest(overweight)
+    sort_census_estimate_lowest(diabetes)
+
+    ave_estimate(obesity)
+    ave_estimate(overweight))
+    ave_estimate(diabetes, True))
+
+    regional_estimate(obesity)
+    regional_estimate(overweight)
+    regional_estimate(diabetes)
+
+    state_estimate(obesity)
+    state_estimate(overweight)
+    state_estimate(diabetes)

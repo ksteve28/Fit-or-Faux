@@ -1,4 +1,75 @@
 
+County Occurances within Census Tracts
+
+| County_Name   |   OBJECTID |
+|:--------------|-----------:|
+| Arapahoe      |        147 |
+| Denver        |        143 |
+| Jefferson     |        136 |
+| El Paso       |        130 |
+| Adams         |         96 |
+| Weld          |         77 |
+| Larimer       |         73 |
+| Boulder       |         68 |
+| Douglas       |         61 |
+| Pueblo        |         54 |
+| Mesa          |         29 |
+| Broomfield    |         15 |
+| Eagle         |         14 |
+| Fremont       |         13 |
+| Garfield      |         11 |
+| La Plata      |         10 |
+| Montrose      |         10 |
+| Routt         |          8 |
+| Morgan        |          8 |
+| Otero         |          7 |
+| Delta         |          7 |
+| Montezuma     |          7 |
+| Elbert        |          7 |
+| Teller        |          6 |
+| Las Animas    |          6 |
+| Logan         |          6 |
+| Park          |          5 |
+| Chaffee       |          5 |
+| Prowers       |          5 |
+| Summit        |          5 |
+| Gunnison      |          4 |
+| San Miguel    |          4 |
+| Pitkin        |          4 |
+| Moffat        |          4 |
+| Alamosa       |          4 |
+| Archuleta     |          4 |
+| Rio Grande    |          3 |
+| Kit Carson    |          3 |
+| Clear Creek   |          3 |
+| Grand         |          3 |
+| Lincoln       |          2 |
+| Lake          |          2 |
+| Baca          |          2 |
+| Washington    |          2 |
+| Saguache      |          2 |
+| Conejos       |          2 |
+| Costilla      |          2 |
+| Rio Blanco    |          2 |
+| Yuma          |          2 |
+| Phillips      |          2 |
+| Huerfano      |          2 |
+| Dolores       |          1 |
+| Custer        |          1 |
+| Gilpin        |          1 |
+| Ouray         |          1 |
+| Hinsdale      |          1 |
+| San Juan      |          1 |
+| Jackson       |          1 |
+| Sedgwick      |          1 |
+| Cheyenne      |          1 |
+| Bent          |          1 |
+| Kiowa         |          1 |
+| Mineral       |          1 |
+| Crowley       |          1 |
+
+
+
 Obesity Census Tract Grouped by Counties 
 
 | County_Name   |   Obese_Census_Tract_Estimate |
