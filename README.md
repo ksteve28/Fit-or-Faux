@@ -212,12 +212,13 @@ While examining the data I am able to comment on Colorado's fitness level on a n
 #
 
 
-So what does all of this data allude to? It would appear the the BRFSS surveys show that the mean of the data does align with the state estimates of the assesed health conditions. On a national scale, Colorado does have a considerably lower rate than the estimated average. However, further analyis and testing would be needed to determine if it was signifcantly lower.  
+So what does all of this data allude to? It would appear the the BRFSS surveys show that the mean of the data does align with the state estimates of the assesed health conditions. On a national scale, Colorado does have a considerably lower average estimated rate than the national estimated average. 
 
-With health epidemics on the rise and the economic cost associated with the conditions Colorado has the opportunity to address the health conditions and allocate resources before they continue to rise and reach the national estimated levels. 
+Health conditions such as overweight, obesity, and diabetes can tax an economy dramactically. These health conditions as mentioned earlier are often seen with comorbidities. What that means to an economy on a microeconomic level is that health care costs can eat into an individuals income, lifestyle, and happiness. On a macroeconomic level it affects companies, governments, and healthcare including patient care and insurance. What this means is Americans are paying more. The average American's health insurance grew 66% from 2005 to 2015. 
 
-COVID-19 was a reminder of the potential implications comorbidities have with illnesses. 
+The CDPHE has a unique opportunity to continue to work on preventative measures of these health conditions through policies, education and allocating resources to not only high risk counties, but all counties. It could also be worth examining health behaviors of counties in the lowest at risk estimates.
 
+There is no doubt there is a national epidemic on the rise for the health conditions discussed. While Colorado and the CDPHE as a whole are doing a good job keeping the state estimated values less than the national average, it is apparent the work must go on.
 
 #
 
@@ -230,5 +231,7 @@ BMI Information - [Click Here](https://infogram.com/us-adult-obesity-rates-since
 BRFSS - [CDPHE - BRFSS ](https://cdphe.colorado.gov/center-for-health-and-environmental-data/survey-research/behavioral-risk-factor-surveillance-system)
 
 
-CDC Obesity & Overweight Estimates [Click HEre](https://www.cdc.gov/nchs/fastats/obesity-overweight.htm)
+CDC Obesity & Overweight Estimates [Click Here](https://www.cdc.gov/nchs/fastats/obesity-overweight.htm)
+
+Health Care Insurance Costs [CNN](https://money.cnn.com/2018/01/30/news/economy/health-care-costs-eating-the-economy/index.html)
 
